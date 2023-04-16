@@ -72,22 +72,51 @@ main = do
 10)Escribir un programa que pida ingresar 2 números y devuelva el mayor de ellos. Sin usar función max.
 ```Haskell
 main = do 
+    putStrLn "Ingresar dos numeros a comparar: "
     putStrLn "A: "
     a <- readLn
     putStrLn "B: "
     b <- readLn
     let mayor x y = if x > y then x else y
     let m = mayor a b
-    putStrLn (show (m :: Int))
+    putStrLn ("El mayor es: " ++ show (m :: Int))))
 ```
 11)scribir un programa que pida ingresar 3 números y devuelva el mayor de ellos. Usar función max
 ```Haskell
-
+main = do
+  putStrLn "Ingresar 3 numeros a comparar:"
+  a <- readLn
+  b <- readLn
+  c <- readLn
+  putStrLn ("El mayor es: " ++ show (max (a :: Int) (max (b :: Int) (c :: Int))))
 ```
 12)Escribir un programa que pida ingresar un número y devuelva si es par o impar. Usar función even
-
+```Haskell
+main = do
+    putStrLn"Ingresar numero:"
+    n <- readLn
+    putStrLn( "El numero ingresado es " ++ (if even n then "par." else "impar."))
+```
 13)Escribir un programa que pida ingresar un número y devuelva si es par o impar. Usar función odd
-
+```Haskell
+main = do
+    putStrLn"Ingresar numero:"
+    n <- readLn
+    putStrLn( "El numero ingresado es " ++ (if odd n then "impar." else "par."))
+```
 14)Escribir un programa que pida ingresar un número y devuelva si es par o impar. Usar función mod
-
+```Haskell
+main = do
+    putStrLn"Ingresar numero:"
+    n <- readLn
+    if mod n 2 == 0
+        then putStrLn "El numero ingresado es par."
+        else putStrLn "El numero ingresado es impar."
+```
 15)Escribir un programa que pida ingresar una cadena y devuelva su longitud.
+```Haskell
+main = do
+    putStrLn"Ingresar cadena:"
+    s <- getLine
+    putStrLn(show(length s))
+```
