@@ -2,9 +2,9 @@
 
 2)Escribir un programa que calcule la suma de números naturales pares menores de 7. Usar comprensión de listas (x/x)
 
-3)Escribir un programa que calcule el producto de números naturales. Usar comprensión de listas (x/x)
+3)Escribir un programa que calcule el producto de números naturales, menores a 7. Usar comprensión de listas (x/x)
 
-4)Escribir un programa que calcule el producto de números naturales múltiplos de 3. Usar comprensión de listas (x/x)
+4)Escribir un programa que calcule el producto de números naturales múltiplos de 3, menores a 7. Usar comprensión de listas (x/x)
 
 5)Escribir un programa que muestre "aprobado" para un número mayor o igual que 11 y "desaprobado" en caso contrario para una lista inicial. Usar comprensión de listas (x/x) y lista inicial [19, 0, 11, 10, 20, 5]
 
