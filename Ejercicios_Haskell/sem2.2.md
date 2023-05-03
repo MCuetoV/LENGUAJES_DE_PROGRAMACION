@@ -1,4 +1,4 @@
-B
+
 11)Escriba un programa que reciba un número entero y una lista. 
 Si el numero entero es par, devolver una nueva lista que contenga la lista inicial y el numero entero ingresado. Si no, devolver la lista inicial.
 
