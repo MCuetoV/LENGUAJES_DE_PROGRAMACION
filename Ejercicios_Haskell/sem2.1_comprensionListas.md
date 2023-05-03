@@ -80,3 +80,10 @@ main = do
     print dist
 ```
 10)Escribir un programa que calcule la distancia total entre 3 segmentos. Un segmento es una matriz conformada por dos listas origen y destino, y cada lista tiene dos elementos "x" y "y". La distancia total es la suma de las distancias de cada segmento. Use la función distancia para calcular la distancia para un segmento dado. Usar comprensión de lista. Calcule la distancia para la matrizX [[[1, 1], [2, 2]], [[2, 2], [3, 3]], [[3, 3], [4, 4]]]
+```Haskell
+main = do
+  let distancia matriz = sqrt((matriz!!1!!0 - matriz!!0!!0)^2 + (matriz!!1!!1 - matriz!!0!!1)^2)
+  let matrizX = [[[1, 1], [2, 2]], [[2, 2], [3, 3]], [[3, 3], [4, 4]]]
+  let distancia_resultado = [ distancia(matrizA) | matrizA <- matrizX ]
+  print (sum(distancia_resultado))
+```
