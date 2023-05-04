@@ -11,13 +11,11 @@ main = do
 ```
 12)Escriba un programa que reciba como entrada una lista de numeros enteros y devuelva su promedio entero.
 ```Haskell
-promLista xs = (sum [x|x<-xs])/sum [1|_<-xs]
+promLista xs = sum xs/sum [1|_<-xs]
 
-promLista2 xs = sum xs/sum [1|_<-xs]
 main = do
     let lista = [1..10]
     print (promLista lista)
-    print (promLista2 lista)
 ```
 13)Escribir un programa que reciba como entrada una lista de numeros enteros y un numero entero,
 y devuelva una nueva lista donde cada uno de los elementos de la lista sea multiplicado por el numero entero ingresado.
