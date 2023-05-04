@@ -21,15 +21,18 @@ main = do
 ```
 13)Escribir un programa que reciba como entrada una lista de numeros enteros y un numero entero,
 y devuelva una nueva lista donde cada uno de los elementos de la lista sea multiplicado por el numero entero ingresado.
-
+```Haskell
+multiplicarlista n xs = [x*n|x<-xs]
+```
 14)Escriba un programa que reciba como entrada una lista de años y devuelva una nueva lista con aquellos que son bisiestos. 
 Tomar en cuenta que un año bisiesto es un año que puede ser divisible entre 4 (sin residuo) excepto cada año que es divisible entre 100 (sin residuo), 
 a no ser que el año sea divisible entre 400 (sin residuo).
 ```Haskell
+bisiesto año = año `mod` 4 == 0 && ((año `mod` 100 /= 0)||(año `mod` 400 == 0))
+
 main = do
-    let bisYear year = year `mod` 4 == 0 && (((year `mod` 100) /= 0) || (year `mod` 400 == 0))
-    let anio = 2001
-    print (bisYear anio)
+    let año = 2000
+    print(bisiesto año)
 ```
 
 15)Escriba un programa que reciba como entrada 2 listas, y devuelva una nueva lista con los elementos de la primera lista que existan en la segunda.
@@ -121,13 +124,11 @@ eliminarDuplicados l3 = [head l3] ++ eliminarDuplicados(delete (head l3) (tail l
 ```
 28)Escriba un programa que reciba como parametro n (un numero entero del 1 al 5), y replique los elementos de la lista n veces. Trabajar con la lista [1, 2, 3, 4, 5]
 ```Haskell
-
-main = do 
-    let myList = [1, 2, 3, 4, 5]
-    print (generarDuplicados 3 myList)
-
 generarDuplicados n [] = []
-generarDuplicados n lista = (replicate n (head lista)) ++ (generarDuplicados n (tail lista)
+generarDuplicados n lista = replicate n (head lista) ++ generarDuplicados n (tail lista)
+
+main = do
+    print(generarDuplicados 3 [1,2,3,4,5])
 ```
 29)Escribir un programa que recorra una la lista [1, 3, 4, 5, 8, 9, 10] y la separe en dos sublistas de números pares e impares.
 ```Haskell
@@ -138,8 +139,7 @@ main = do
 30)Escribir un programa que reciba como parametros una lista de números enteros y un número entero (n), 
 devolver la lista filtrada en la que cada elemento cumpla la siguiente condición: < n.
 ```Haskell
-main = do
-  print (filtrarLista [1, 3, 5, 6, 7, 8, 10] 7)
-
 filtrarLista lista n = filter (< n) lista 
+main = do 
+    print(filtrarLista [1,3,4,7,8,12,10,9] 9)
 ```
