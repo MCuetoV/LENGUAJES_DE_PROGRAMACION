@@ -36,9 +36,24 @@ main = do
 ```
 
 15)Escriba un programa que reciba como entrada 2 listas, y devuelva una nueva lista con los elementos de la primera lista que existan en la segunda.
+```Haskell
+encomun :: (Eq a) => [a] -> [a] -> [a]
+encomun[] _ = []
+encomun(x:xs) ys
+    | x `elem` ys = x : encomun xs ys
+    | otherwise = encomun xs ys
 
+main = do
+    let lista1 = [1,2,3]
+    let lista2 = [2,3,4]
+    print (encomun lista1 lista2)
+```
 16)Escriba un programa que reciba un numero entero y devuelva una lista con su tabla de multplicar del 1 al 12.
-
+```Haskell
+tablamulti n = [x*n|x<-[1..12]
+main = do
+    print(tablamulti 7)
+```
 17)Escriba un programa que reciba una lista de istas de números enteros (lista de 2 nieveles o dimensiones, 
 tambien conocida como matriz) y que devuelva una nueva lista con los promedios enteros de cada lista que tengan, por lo menos, 3 elementos.
 
@@ -115,13 +130,9 @@ eliminarDuplicados [] = []
 eliminarDuplicados l3 = [head l3] ++ eliminarDuplicados(delete (head l3) (tail l3))
 ```
 26)Escriba un programa que reciba como parametro una cadena, extraiga las palabras y coloque cada una en una lista.
-```Haskell
 
-```
 27)Escriba un programa que reciba como parametro una cadena y devuelva una lista de las vocales que se encuentren en la entrada sin que se repitan.
-```Haskell
 
-```
 28)Escriba un programa que reciba como parametro n (un numero entero del 1 al 5), y replique los elementos de la lista n veces. Trabajar con la lista [1, 2, 3, 4, 5]
 ```Haskell
 generarDuplicados n [] = []
