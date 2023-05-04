@@ -1,15 +1,36 @@
 
 11)Escriba un programa que reciba un número entero y una lista. 
 Si el numero entero es par, devolver una nueva lista que contenga la lista inicial y el numero entero ingresado. Si no, devolver la lista inicial.
+```Haskell
+parList n lista = if even n then lista ++ [n] else lista
 
+main = do
+    let n = 9
+        list = [1,2,3,4,5,6]
+    putStrLn("la lista es: "++ show (parList n list))
+```
 12)Escriba un programa que reciba como entrada una lista de numeros enteros y devuelva su promedio entero.
+```Haskell
+promLista xs = (sum [x|x<-xs])/sum [1|_<-xs]
 
+promLista2 xs = sum xs/sum [1|_<-xs]
+main = do
+    let lista = [1..10]
+    print (promLista lista)
+    print (promLista2 lista)
+```
 13)Escribir un programa que reciba como entrada una lista de numeros enteros y un numero entero,
 y devuelva una nueva lista donde cada uno de los elementos de la lista sea multiplicado por el numero entero ingresado.
 
 14)Escriba un programa que reciba como entrada una lista de años y devuelva una nueva lista con aquellos que son bisiestos. 
 Tomar en cuenta que un año bisiesto es un año que puede ser divisible entre 4 (sin residuo) excepto cada año que es divisible entre 100 (sin residuo), 
 a no ser que el año sea divisible entre 400 (sin residuo).
+```Haskell
+main = do
+    let bisYear year = year `mod` 4 == 0 && (((year `mod` 100) /= 0) || (year `mod` 400 == 0))
+    let anio = 2001
+    print (bisYear anio)
+```
 
 15)Escriba un programa que reciba como entrada 2 listas, y devuelva una nueva lista con los elementos de la primera lista que existan en la segunda.
 
