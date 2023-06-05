@@ -101,14 +101,6 @@ int main(){
 #include <iostream>
 using namespace std;
 int main(){
-
-}
-```
-8.-Declara un array de enteros llamado "numeros" de tamaño 5. Asigna los valores del 1 al 5 a cada posición del array. Imprime los elementos del array en la consola.
-```C++
-#include <iostream>
-using namespace std;
-int main(){
     int dia;
     cout<<"Ingresar numero del 1 al 7 para ver que dia de la semana corresponde: "<<endl;
     cin>>dia;
@@ -139,7 +131,20 @@ int main(){
         cout<<"No valido";
         break;
     }
-    cout<<endl;
+}
+```
+8.-Declara un array de enteros llamado "numeros" de tamaño 5. Asigna los valores del 1 al 5 a cada posición del array. Imprime los elementos del array en la consola.
+```C++
+#include <iostream>
+using namespace std;
+int main(){
+    int numeros[5];
+    for(int i=0;i<5;i++){
+        numeros[i] = i + 1;
+    }
+    for(int i=0;i<5;i++){
+        cout<<numeros[i]<<" ";
+    }
 }
 ```
 9.-Lee 5 números enteros del usuario y almacénalos en un array llamado "numeros". Luego, calcula y muestra la suma de los números.
@@ -214,7 +219,7 @@ using namespace std;
 int main(){
     for(int i = 10; i>=1; i--){
         cout<<i<<" ";
-    } nm
+    }
 }
 ```
 14.-Calcula la suma de los números del 1 al 100 utilizando un bucle "while". Imprime el resultado.
@@ -253,7 +258,16 @@ int main(){
 #include <iostream>
 using namespace std;
 int main(){
-
+    char letra;
+    cout<<"Ingresar letra"<<endl;
+    cin>>letra;
+    char letraminuscula = tolower(letra);
+    if(letraminuscula == 'a'||letraminuscula == 'e'||
+    letraminuscula == 'i'||letraminuscula == 'o'||letraminuscula == 'u'){
+        cout<<"Es vocal"<<endl;
+    }
+    else
+        cout<<"Es consonante";
 }
 ```
 17.-Lee un número del usuario y utiliza un switch para imprimir el nombre del mes correspondiente.
@@ -261,7 +275,52 @@ int main(){
 #include <iostream>
 using namespace std;
 int main(){
-
+    int mes;
+    cout<<"Ingresar numero del 1 al 12 para ver que mes corresponde: "<<endl;
+    cin>>mes;
+    switch (mes)
+    {
+    case 1:
+        cout<<"Enero";
+        break;
+    case 2:
+        cout<<"Febrero";
+        break;
+    case 3:
+        cout<<"Marzo";
+        break;
+    case 4:
+        cout<<"Abril";
+        break;
+    case 5:
+        cout<<"Mayo";
+        break;
+    case 6:
+        cout<<"Junio";
+        break;
+    case 7:
+        cout<<"Julio";
+        break;
+    case 8:
+        cout<<"Agosto";
+        break;
+    case 9:
+        cout<<"Septiembre";
+        break;
+    case 10:
+        cout<<"Octubre";
+        break;    
+    case 11:
+        cout<<"Noviembre";
+        break;
+    case 12:
+        cout<<"Diciembre";
+        break;
+    default:
+        cout<<"Mes no valido";
+        break;
+    }
+    cout<<endl;
 }
 ```
 18.-Declara un array de caracteres llamado "palabra" de tamaño 10. Lee una palabra del usuario y almacénala en el array. Imprime la palabra en la consola.
@@ -269,7 +328,17 @@ int main(){
 #include <iostream>
 using namespace std;
 int main(){
-
+    char palabra[10];
+    cout << "Ingresar palabra: ";
+    // no se esta ingresando un string sino la lista de chars
+    cin >> palabra;
+    cout << "El array contiene la palabra: ";
+    // tambien se puede usar strlen(palabra) en el for
+    // 
+    for (int i = 0; i < 10; i++) {
+        cout << palabra[i] << " ";
+    }
+    cout<<endl;
 }
 ```
 19.-Lee 5 números enteros del usuario y almacénalos en un array llamado "numeros". Luego, encuentra el número mayor en el array y muéstralo en la consola.
