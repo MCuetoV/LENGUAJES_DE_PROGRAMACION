@@ -346,14 +346,37 @@ int main(){
 #include <iostream>
 using namespace std;
 int main(){
-
+    int numeros[5];
+    cout << "Ingrese 5 numeros enteros: "<<endl;
+    for (int i = 0; i < 5; i++) {
+        cin >> numeros[i];
+    }
+    // Encontrar el mayor en el array
+    int mayor = numeros[0];
+    for (int i = 1; i < 5; i++) {
+        if (numeros[i] > mayor) {
+            mayor = numeros[i];
+        }
+    }
+    cout<<"El mayor numero es: "<<mayor<<endl;
 }
 ```
 20.-Declara una estructura llamada "Rectangulo" con dos miembros: "largo" y "ancho", ambos enteros. Crea una variable de tipo "Rectangulo" y pide al usuario que ingrese los valores de "largo" y "ancho". Calcula y muestra el área del rectángulo.
 ```C++
 #include <iostream>
 using namespace std;
+struct Rectangulo{
+    int largo;
+    int ancho;
+};
 int main(){
+    Rectangulo rectangulo;
+    cout<<"Ingresar largo: "<<endl;
+    cin>>rectangulo.largo;
+    cout<<"Ingresar ancho: "<<endl;
+    cin>>rectangulo.ancho;
 
+    int area = rectangulo.ancho * rectangulo.largo;
+    cout<<"El area del rectangulo es: "<<area;
 }
 ```
