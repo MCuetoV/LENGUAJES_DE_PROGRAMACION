@@ -1,1 +1,29 @@
+Escribir una función que intercambie el valor de dos variables enteras utilizando punteros.
+```C++
+
+```
+Escribir una función que reciba un puntero a un número entero y verifique si es par.
+```C++
+
+```
+Escribir una función que reciba un puntero a un número entero y determine si es positivo, negativo o cero.
+```C++
+
+```
+Escribir una función que reciba un arreglo de enteros y su tamaño, y retorne el valor máximo utilizando punteros.
+```C++
+
+```
+Escribir una función que reciba un puntero a un arreglo de caracteres y lo imprima en reversa. \0 representa null
+```C++
+
+```
+Escribir un programa que:
+a) Implemente una funcion que reciba un valor entero "n", lea "n" valores desde el teclado y los retorne en un array.
+b) Implemente una funcion que reciba un array (como un puntero a entero), un valor "n" con la longitud e imprima los valores en pantalla.
+c) La misma función anterior pero recorriendo el arreglo de otra forma.
+```C++
+
+```
+
 
