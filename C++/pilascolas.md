@@ -28,7 +28,17 @@ AgrImplementegar el método printInverted() de MyQueue para imprimir los element
     }
 ```
 Agregar el método clear() a la clase MyQueue para eliminar todos los elementos de la cola.
-
+```C++
+    void clear() {
+        Node* tmp = root;
+        while (tmp != NULL) {
+            Node* next = tmp->get_next();
+            delete tmp;
+            tmp = next;
+        }
+        root = NULL;
+    }
+```
 Modificar el método dequeue() de MyQueue para devolver -1 si la cola está vacía
 
 Agregar el método peek() a la clase MyQueue para obtener el valor del primer elemento sin eliminarlo.
