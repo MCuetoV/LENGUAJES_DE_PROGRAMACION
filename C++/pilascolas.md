@@ -40,7 +40,17 @@ Agregar el método clear() a la clase MyQueue para eliminar todos los elementos 
     }
 ```
 Modificar el método dequeue() de MyQueue para devolver -1 si la cola está vacía
-
+```C++
+        int Dequeue(){
+            if(!isEmpty()){
+                int tmp = root->get_value();
+                root=root->get_next();
+                return tmp;
+            }
+            else
+                cout<<"-1";
+        }
+```
 Agregar el método peek() a la clase MyQueue para obtener el valor del primer elemento sin eliminarlo.
 
 Agregar el método size() a la clase MyStack para obtener el número de elementos en la pila.
