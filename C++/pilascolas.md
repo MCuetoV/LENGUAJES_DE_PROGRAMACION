@@ -52,9 +52,26 @@ Modificar el método dequeue() de MyQueue para devolver -1 si la cola está vac�
         }
 ```
 Agregar el método peek() a la clase MyQueue para obtener el valor del primer elemento sin eliminarlo.
-
+```C++
+    int peek(){
+        if(!isEmpty()){
+            return root->get_value();
+        }
+        return -1;
+    }
+```
 Agregar el método size() a la clase MyStack para obtener el número de elementos en la pila.
-
+```C++
+int size(){
+    int count = 0;
+    Node* tmp = root;
+    while(tmp!=NULL){
+        count++;
+        tmp = tmp->get_next();
+    }
+    return count;
+}
+```
 Agregar el método printInverted() de MyStack para imprimir los elementos en orden inverso.
 
 Agregar el método clear() a la clase MyStack para eliminar todos los elementos de la pila.
