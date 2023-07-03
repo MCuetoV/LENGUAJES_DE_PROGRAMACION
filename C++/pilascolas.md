@@ -112,22 +112,19 @@ Implementar un método reverse() en la clase MyQueue que invierta el orden de lo
 Modificar la clase MyQueue para agregar un método removeDuplicates() que elimine los elementos duplicados en la cola, dejando solo una instancia de cada elemento.
 ```C++
 void removeDuplicates() {
-    if (isEmpty())
-        return;
-
-    Node* current = root;
-    while (current) {
-        Node* runner = current;
-        while (runner->get_next()) {
-            if (runner->get_next()->get_value() == current->get_value()) {
-                Node* duplicate = runner->get_next();
-                runner->set_next(runner->get_next()->get_next());
+    Node* tmp = root;
+    while (tmp) {
+        Node* aux = tmp;
+        while (aux->get_next()) {
+            if (aux->get_next()->get_value() == tmp->get_value()) {
+                Node* duplicate = aux->get_next();
+                aux->set_next(aux->get_next()->get_next());
                 delete duplicate;
             } else {
-                runner = runner->get_next();
+                aux = aux->get_next();
             }
         }
-        current = current->get_next();
+        tmp = tmp->get_next();
     }
 }
 ```
