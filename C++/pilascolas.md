@@ -1,6 +1,16 @@
 
 Agregar el método size() a la clase MyQueue para obtener el número de elementos en la cola.
-
+'''C++
+        int size(){
+            int count = 0;
+            Node* tmp = root;
+            while(tmp!=NULL){
+                count++;
+                tmp = tmp->get_next();
+            }
+            return count;
+        }
+'''
 AgrImplementegar el método printInverted() de MyQueue para imprimir los elementos en orden inverso.
 
 Agregar el método clear() a la clase MyQueue para eliminar todos los elementos de la cola.
