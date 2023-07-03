@@ -86,9 +86,27 @@ void clear(){
 }
 ```
 Modificar el método pop() de MyStack para devolver -1 si la pila está vacía
-
+```C++
+        int pop(){
+            if(!isEmpty()){
+                int tmp = root->getValue();
+                root=root->getNext();
+                return tmp;
+            }
+            else
+                return -1;
+        }
+```
 Agregar el método peek() a la clase MyStack para obtener el valor del elemento superior sin eliminarlo.
-
+```C++
+int peek(){
+    if(!isEmpty()){
+        int top = pop();
+        push(top);
+        cout<<top;
+    }
+}
+```
 Implementar un método reverse() en la clase MyQueue que invierta el orden de los elementos en la cola sin utilizar estructuras de datos adicionales.
 
 Modificar la clase MyQueue para agregar un método removeDuplicates() que elimine los elementos duplicados en la cola, dejando solo una instancia de cada elemento.
