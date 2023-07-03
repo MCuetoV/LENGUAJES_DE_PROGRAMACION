@@ -129,7 +129,27 @@ void removeDuplicates() {
 }
 ```
 Implementar un método interleave() en la clase MyQueue que tome dos colas y cree una nueva cola intercalando los elementos de ambas colas.
+```C++
+void interleave(My_Queue& queue1, My_Queue& queue2) {
+    Node* current1 = queue1.root;
+    Node* current2 = queue2.root;
 
+    My_Queue result;
+
+    while (current1 || current2) {
+        if (current1) {
+            result.Enqueue(current1->get_value());
+            current1 = current1->get_next();
+        }
+        if (current2) {
+            result.Enqueue(current2->get_value());
+            current2 = current2->get_next();
+        }
+    }
+
+    root = result.root;
+}
+```
 Modificar la clase MyQueue para agregar un método rotate(int k) que rote los elementos de la cola k posiciones hacia la izquierda.
 
 Modificar la clase MyStack para agregar un método sort() que ordene los elementos en la pila de forma ascendente.
