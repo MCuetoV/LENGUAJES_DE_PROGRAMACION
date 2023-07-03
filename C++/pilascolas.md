@@ -73,9 +73,18 @@ int size(){
 }
 ```
 Agregar el método printInverted() de MyStack para imprimir los elementos en orden inverso.
+```C++
 
+
+```
 Agregar el método clear() a la clase MyStack para eliminar todos los elementos de la pila.
-
+```C++
+void clear(){
+    while(!this->isEmpty()){
+        pop();
+    }
+}
+```
 Modificar el método pop() de MyStack para devolver -1 si la pila está vacía
 
 Agregar el método peek() a la clase MyStack para obtener el valor del elemento superior sin eliminarlo.
