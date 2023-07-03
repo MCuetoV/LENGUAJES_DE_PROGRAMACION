@@ -12,7 +12,21 @@ int size(){
  }
 ```
 AgrImplementegar el método printInverted() de MyQueue para imprimir los elementos en orden inverso.
+```C++
+    void printReversa(Node* node) {
+        if (node == NULL) {
+            return;
+        }
+        printReversa(node->get_next());
+        cout << node->get_value() << "->";
+    }
 
+    void printInverted() {
+        cout << "Cola al reves: ";
+        printReversa(root);
+        cout <<"NULL"<<endl;
+    }
+```
 Agregar el método clear() a la clase MyQueue para eliminar todos los elementos de la cola.
 
 Modificar el método dequeue() de MyQueue para devolver -1 si la cola está vacía
