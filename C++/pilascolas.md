@@ -110,7 +110,27 @@ int peek(){
 Implementar un método reverse() en la clase MyQueue que invierta el orden de los elementos en la cola sin utilizar estructuras de datos adicionales.
 
 Modificar la clase MyQueue para agregar un método removeDuplicates() que elimine los elementos duplicados en la cola, dejando solo una instancia de cada elemento.
+```C++
+void removeDuplicates() {
+    if (isEmpty())
+        return;
 
+    Node* current = root;
+    while (current) {
+        Node* runner = current;
+        while (runner->get_next()) {
+            if (runner->get_next()->get_value() == current->get_value()) {
+                Node* duplicate = runner->get_next();
+                runner->set_next(runner->get_next()->get_next());
+                delete duplicate;
+            } else {
+                runner = runner->get_next();
+            }
+        }
+        current = current->get_next();
+    }
+}
+```
 Implementar un método interleave() en la clase MyQueue que tome dos colas y cree una nueva cola intercalando los elementos de ambas colas.
 
 Modificar la clase MyQueue para agregar un método rotate(int k) que rote los elementos de la cola k posiciones hacia la izquierda.
